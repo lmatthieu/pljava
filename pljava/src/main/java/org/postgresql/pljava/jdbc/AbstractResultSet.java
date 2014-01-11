@@ -163,6 +163,18 @@ public abstract class AbstractResultSet implements ResultSet
 		return this.getObject(this.findColumn(columnName), map);
 	}
 
+	public <T> T getObject( int columnIndex, Class<T> type )
+  throws SQLException
+  {
+	  throw new SQLFeatureNotSupportedException( this.getClass() + ".getObject( int columnIndex, Class<T> type ) not implemented yet.", "0A000" );
+  }
+	
+	public <T> T getObject( String columnLabel, Class<T> type )
+  throws SQLException
+  {
+    throw new SQLFeatureNotSupportedException( this.getClass() + ".getObject( String columnLabel, Class<T> type ) not implemented yet.", "0A000" );
+  }
+	
 	public Ref getRef(String columnName)
 	throws SQLException
 	{
